@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import org.testng.Assert;
 import org.testng.Reporter;
 
-import com.aventstack.extentreports.ExtentTest;
+
 import com.cawi.generic.baseTest;
 import com.cawi.generic.excelData;
 import com.cawi.pages.loginPage;
@@ -15,8 +15,7 @@ public class invalidLoginTest extends baseTest
 @Test(priority=1)
 	public void testInvalidLoginLogout() throws InterruptedException 
 	{
-	ExtentTest logger = extent.createTest("login test1");
-
+	
 	Reporter.log("invalid test started",true);
 	String loginTitle=excelData.getData(File_Path, "TC04", 1, 0);
 	String expecteduserErrorMessage=excelData.getData(File_Path, "TC05", 1, 0);

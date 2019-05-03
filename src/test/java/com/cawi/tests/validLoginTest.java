@@ -5,7 +5,6 @@ import org.testng.annotations.Test;
 
 import org.testng.Reporter;
 
-import com.aventstack.extentreports.ExtentTest;
 import com.cawi.generic.baseTest;
 import com.cawi.generic.excelData;
 import com.cawi.pages.clientsPage;
@@ -17,7 +16,7 @@ public class validLoginTest extends baseTest
 	@Test(priority=2)
 	public void testValidLogin()
 	{
-		ExtentTest logger= extent.createTest("test2 valid login");
+		
 		Reporter.log("valid test started",true);
 		String user=excelData.getData(File_Path, "TC01", 1, 0);
 		String pass=excelData.getData(File_Path, "TC01", 1, 1);

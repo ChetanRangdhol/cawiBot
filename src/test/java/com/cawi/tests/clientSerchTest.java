@@ -5,7 +5,6 @@ import org.testng.annotations.Test;
 import org.testng.Assert;
 import org.testng.Reporter;
 
-import com.aventstack.extentreports.ExtentTest;
 import com.cawi.generic.baseTest;
 import com.cawi.generic.excelData;
 import com.cawi.pages.clientsPage;
@@ -16,7 +15,7 @@ public class clientSerchTest extends baseTest
 	@Test(priority=3)
 	public void testSerchEngine()
 	{
-		ExtentTest logger = extent.createTest("test3");
+		
 		Reporter.log("client serch test started",true);
 		String eClient=excelData.getData(File_Path, "TC03", 1, 0);
 		String user=excelData.getData(File_Path, "TC01", 1, 0);
