@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.cawi.tests.invalidLoginTest">
+        <methods>
+          <include name="precondition"/>
+          <include name="startReport"/>
+          <include name="endReport"/>
+          <include name="testInvalidLoginLogout"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- com.cawi.tests.invalidLoginTest -->
+      <class name="com.cawi.tests.clientSerchTest">
+        <methods>
+          <include name="precondition"/>
+          <include name="testSerchEngine"/>
+          <include name="startReport"/>
+          <include name="endReport"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- com.cawi.tests.clientSerchTest -->
+      <class name="com.cawi.tests.validLoginTest">
+        <methods>
+          <include name="precondition"/>
+          <include name="startReport"/>
+          <include name="endReport"/>
+          <include name="testValidLogin"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- com.cawi.tests.validLoginTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
