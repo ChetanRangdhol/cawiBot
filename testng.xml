@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.cawi.tests.clientSerchTest"/>
+      <class name="com.cawi.tests.invalidPageTest"/>
       <class name="com.cawi.tests.invalidLoginTest"/>
       <class name="com.cawi.tests.validLoginTest"/>
     </classes>

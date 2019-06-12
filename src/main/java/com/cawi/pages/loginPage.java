@@ -12,43 +12,68 @@ public class loginPage extends basePage
 {
 	
 	//declaration
-
-		@FindBy(name="username")
+	
+	    
+	
+	    @FindBy(xpath="//img[@src='http://139.59.73.223:9006/uploads/logos/91248be0-4620-11e9-b98d-6d33db91c1f0launchIcon.png']")
+        private WebElement 	logo;	
+		
+        @FindBy(name="employeeID")
 		private WebElement usernameTB;
 		
-		@FindBy(name="password")
+		@FindBy(name="employeePwd")
 		private WebElement passwordTB;
 		
-		@FindBy(xpath="//button[.='LOGIN']")
+		@FindBy(xpath="//button[.='Start Conversation']")
 		private WebElement loginBTN;
 		
-		@FindBy(xpath="//h5[.='Wrong Password']")
-		private WebElement pwdErrorMSG;
+		@FindBy(xpath="(//button[.=' 1. View leave balance '])[last()]")
+		private WebElement ViewLeaveBTN;
 		
-		@FindBy(xpath="//button[.='OK']")
-		private WebElement okBTN;
+		@FindBy(xpath="//label[.='View Leave Balance']")
+		private WebElement ViewLeaveTitle;
 		
-		@FindBy(xpath="//a[.='Forgot Password?']")
-		private WebElement forgotPasswordBTN;
+		@FindBy(xpath="(//button[.=' 4. View GSTN '])[last()]")
+		private WebElement ViewGstnBTN;
 		
-		@FindBy(xpath="//h5[.='User Not Found']")
-		private WebElement userErrorMSG;
+		@FindBy(xpath="(//button[.=' 9. Apply Leave '])[last()]")
+		private WebElement applyLeaveBTN;
 		
-		@FindBy(name="userName")
-		private WebElement frgtPassUsernameTB;
+		@FindBy(xpath="(//button[.=' Go back '])[last()]")
+		private WebElement GoBackBTN;
 		
-		@FindBy(xpath="//span[.='Continue']")
-		private WebElement frgtPassContinueBTN;
-	
-		@FindBy(xpath="//span[.='Cancel']")
-		private WebElement frgtPassCancelBTN;
+		@FindBy(className="img close-embed")
+		private WebElement ClosePopUpBTN;
+		
+		@FindBy(xpath="(//button[.='Start Over '])[last()]")
+		private WebElement startOverBTN;
+		
+		@FindBy(xpath="//td[.='25']")
+		private WebElement selectDate;
+		
+		@FindBy(name="date")
+		private WebElement date;
+		
+		@FindBy(name="applicationType")
+		private WebElement leaveType;
+		
+		@FindBy(css="select[name='sessionType']")
+		private WebElement sessionType;
+		
+		@FindBy(xpath="//button[.='Send ']")
+		private WebElement sendBTN;
+		
 		
 		//initialization
+		
 		public loginPage(WebDriver driver)
 		{
 			super(driver);
 			PageFactory.initElements(driver, this);	
 		}
+		
+		
+		
 		// utilize
 		public void verifyPage(String etitle)
 		{
@@ -62,43 +87,68 @@ public class loginPage extends basePage
 		{
 			passwordTB.sendKeys(pw);
 		}
-		public String verifyPwdErrorMessage()
+		public void clickGoBackBTN()
 		{
-			verifyElement(pwdErrorMSG);
-		String aErrorMessage = pwdErrorMSG.getText();
-		return aErrorMessage;	
+			GoBackBTN.click();
 		}
-		public String verifyUserErrorMsg()
+		public void clickStrtOverBTN()
 		{
-			verifyElement(userErrorMSG);
-		String aErrorMessage = userErrorMSG.getText();
-		return aErrorMessage;
+			startOverBTN.click();
+		}
+		public void clickOnViewLeaveBTN()
+		{
+		   ViewLeaveBTN.click();
+		}
+		public void clickViewGstnBTN()
+		{
+			ViewGstnBTN.click();
+			
+		}
+		public String verifyleave()
+		{
+			verifyElement(ViewLeaveTitle);
+			String vl=ViewLeaveTitle.getText();
+			return vl;
+		}
+		public void clickClosePopUp()
+		{
+			ClosePopUpBTN.click();
+		}
+		public void clickApplyLeaveBTN()
+		{
+			applyLeaveBTN.click();
 		}
 		public void clickOnLogin() 
 		{
 		    loginBTN.click();	
 		}
-		public void clickOnOkBTN()
+		
+		public void clickOndate()
 		{
-			okBTN.click();
+			date.click();
 		}
-		public void clickOnCancelBTN() 
-		{
-		frgtPassCancelBTN.click();	
-		}
-		public void clickOnContinueBTN() 
-		{
-		frgtPassContinueBTN.click();
-		}
-		public void frgtPassUserNameTB(String fun) 
-		{
-		frgtPassUsernameTB.sendKeys(fun);	
-		}
-		
-		
-		
-		
-		
+		 public void clickSend()
+		 {
+			 sendBTN.click();
+		 }
+		 public WebElement selectLeave()
+		 {
+			 
+			 return leaveType;
+		 }
 
+		 public WebElement selectSession()
+		 {
+			 return sessionType;
+		 }
+		 
+		 public void clickSelectDate()
+		 {
+			 selectDate.click();
+		 }
 
+		 public void clickLogo()
+		 {
+			 logo.click();
+		 }
 }

@@ -35,7 +35,8 @@ public void verifyElement(WebElement element)
 	try 
 	{
 	wait.until(ExpectedConditions.visibilityOf(element));
-	Reporter.log("element is present:",true);
+	String text = element.getText();
+	Reporter.log("element is present:"+text,true);
 	}
 	catch(Exception e)
 	{

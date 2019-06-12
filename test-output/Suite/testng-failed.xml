@@ -6,30 +6,17 @@
       <class name="com.cawi.tests.invalidLoginTest">
         <methods>
           <include name="precondition"/>
-          <include name="startReport"/>
-          <include name="endReport"/>
-          <include name="testInvalidLoginLogout"/>
-          <include name="getResult"/>
+          <include name="postcondition"/>
+          <include name="testInvalidLogin"/>
         </methods>
       </class> <!-- com.cawi.tests.invalidLoginTest -->
-      <class name="com.cawi.tests.clientSerchTest">
+      <class name="com.cawi.tests.invalidPageTest">
         <methods>
           <include name="precondition"/>
-          <include name="testSerchEngine"/>
-          <include name="startReport"/>
-          <include name="endReport"/>
-          <include name="getResult"/>
+          <include name="postcondition"/>
+          <include name="testInvalidPage"/>
         </methods>
-      </class> <!-- com.cawi.tests.clientSerchTest -->
-      <class name="com.cawi.tests.validLoginTest">
-        <methods>
-          <include name="precondition"/>
-          <include name="startReport"/>
-          <include name="endReport"/>
-          <include name="testValidLogin"/>
-          <include name="getResult"/>
-        </methods>
-      </class> <!-- com.cawi.tests.validLoginTest -->
+      </class> <!-- com.cawi.tests.invalidPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
